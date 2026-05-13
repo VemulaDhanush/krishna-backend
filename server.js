@@ -11,10 +11,11 @@ const PORT = process.env.PORT || 5000;
 connectDB();
 
 app.use(cors({
-  origin: "https://krishna-painting.vercel.app",
+  origin: "*", 
   methods: ["GET", "POST"],
   credentials: true
 }));
+
 app.use(express.json());
 
 app.use("/api/enquiry", enquiryRoutes);
