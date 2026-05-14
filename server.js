@@ -4,9 +4,14 @@ const mongoose = require("mongoose");
 
 const app = express();
 
+// Backend - server.js
+
+
 app.use(cors({
-  origin: true,
-  credentials: true
+  origin: "https://krishna-painting.vercel.app",
+  methods: ["GET", "POST"],
+  credentials: true,
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
 app.use(express.json());
