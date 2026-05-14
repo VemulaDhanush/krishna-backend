@@ -8,10 +8,12 @@ const app = express();
 
 
 app.use(cors({
-  origin: "https://krishna-painting.vercel.app",
+  origin: [
+    "https://krishna-painting.vercel.app",
+    "https://krishna-admin-alpha.vercel.app"
+  ],
   methods: ["GET", "POST"],
-  credentials: true,
-  allowedHeaders: ["Content-Type", "Authorization"]
+  credentials: true
 }));
 
 app.use(express.json());
